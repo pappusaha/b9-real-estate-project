@@ -1,0 +1,323 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Single-Family Home in Beverly Hills",
+      "segment_name": "Single-family homes",
+      "main_image": "https://demo02.houzez.co/wp-content/uploads/2016/03/036-584x438.jpg",
+      "description": "This luxurious single-family home in Beverly Hills redefines elegance and comfort. Spanning 5000 sq ft, the property features expansive living spaces, state-of-the-art finishes, and panoramic city views. The home includes five bedrooms, a modern kitchen, and a private swimming pool surrounded by manicured gardens. Its prime location offers easy access to world-class shopping and dining.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "bed":4,
+      "bathroom":3,
+      "area": "5000 sq ft",
+      "location": {
+        "zip_code": "90210",
+        "area": "Beverly Hills",
+        "country": "USA",
+        "state": "California",
+        "year_build":2017,
+        "garage":1
+      },
+      "facilities": [
+        "Air Conditioning",
+        "Barbeque",
+        "Gym",
+        "Laundry",
+        "Lawn",
+        "Outdoor Shower",
+        "Sauna",
+        "Swimming Pool",
+        "WiFi"
+      ],
+      "agent_name": "John Doe",
+      "agent_img": "agent1.jpg",
+      "image": "villa1.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Modern Townhouse in Brooklyn",
+      "segment_name": "Townhouses",
+      "main_image": "https://demo02.houzez.co/wp-content/uploads/2020/03/205-584x438.jpg",
+      "description": "Located in the vibrant heart of Brooklyn, this modern townhouse combines urban living with contemporary design. It features 3 bedrooms, an open-plan living area, and a rooftop terrace with views of the city skyline. Ideal for families and professionals, the property offers easy access to parks, schools, and public transportation.",
+      "price": "$950,000",
+      "status": "sale",
+      "bed":2,
+      "bathroom":2,
+      "area": "2200 sq ft",
+      "location": {
+        "zip_code": "11201",
+        "area": "Brooklyn",
+        "country": "USA",
+        "state": "New York",
+        "year_build":2018,
+        "garage":1
+      },
+      "facilities": [
+        "Air Conditioning",
+        "Lawn",
+        "Microwave",
+        "Refrigerator",
+        "Sauna",
+        "TV Cable",
+        "WiFi",
+        "Window Coverings"
+      ],
+      "agent_name": "Emily Clark",
+      "agent_img": "agent2.jpg",
+      "image": "townhouse1.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Cozy Apartment in Downtown Chicago",
+      "segment_name": "Apartments",
+      "main_image": "https://demo02.houzez.co/wp-content/uploads/2016/03/018-1170x877.jpg",
+      "description": "This cozy downtown apartment offers convenience and style. Perfect for singles or couples, the property features a sleek modern kitchen, a spacious bedroom, and a private balcony. Residents can enjoy on-site amenities like a gym, swimming pool, and laundry facilities.",
+      "price": "$2,000/month",
+      "status": "Rent",
+      "bed":1,
+      "bathroom":1,
+      "area": "900 sq ft",
+      "location": {
+        "zip_code": "60601",
+        "area": "Downtown Chicago",
+        "country": "USA",
+        "state": "Illinois",
+        "year_build":2019,
+        "garage":1
+      },
+      
+      "facilities": [
+        "Air Conditioning",
+        "Gym",
+        "Microwave",
+        "Refrigerator",
+        "Swimming Pool",
+        "WiFi"
+      ],
+      "agent_name": "Sophia Brown",
+      "agent_img": "agent3.jpg",
+      "image": "apartment1.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Affordable Student Housing Near University",
+      "segment_name": "Student housing",
+      "main_image": "https://demo02.houzez.co/wp-content/uploads/2016/03/020-584x438.jpg",
+      "description": "This affordable student housing is conveniently located near the university campus. The fully furnished rooms include study desks, shared kitchens, and WiFi access. The property also features a community lounge and 24-hour security for a safe and friendly environment.",
+      "price": "$500/month",
+      "status": "Rent",
+      "bed":1,
+      "bathroom":1,
+      "area": "300 sq ft",
+      "location": {
+        "zip_code": "12345",
+        "area": "University Town",
+        "country": "USA",
+        "state": "New York",
+        "year_build":2020,
+        "garage":1
+      },
+      "facilities": [
+        "WiFi",
+        "Laundry",
+        "Microwave",
+        "TV Cable",
+        "Washer"
+      ],
+      "agent_name": "Michael Lee",
+      "agent_img": "agent4.jpg",
+      "image": "student1.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Comfortable Senior Living Community",
+      "segment_name": "Senior living communities",
+      "main_image": "https://demo02.houzez.co/wp-content/uploads/2020/03/205-584x438.jpg",
+      "description": "A serene senior living community offering comfortable apartments tailored for retirees. The property includes shared amenities such as a wellness center, communal dining area, and beautifully landscaped gardens. Professional on-site staff ensures a safe and enjoyable lifestyle.",
+      "price": "$1,500/month",
+      "status": "Rent",
+      "bed":2,
+      "bathroom":1,
+      "area": "700 sq ft",
+      "location": {
+        "zip_code": "98052",
+        "area": "Redmond",
+        "country": "USA",
+        "state": "Washington",
+        "year_build":2021,
+        "garage":1
+      },
+      "facilities": [
+        "Air Conditioning",
+        "Gym",
+        "Laundry",
+        "Microwave",
+        "Refrigerator",
+        "WiFi"
+      ],
+      "agent_name": "David Johnson",
+      "agent_img": "agent5.jpg",
+      "image": "senior1.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Spacious Vacation Rental by the Beach",
+      "segment_name": "Vacation rentals",
+      "main_image": "https://demo02.houzez.co/wp-content/uploads/2016/03/013-584x438.jpg",
+      "description": "Experience the ultimate beach getaway at this spacious vacation rental. This fully furnished home includes multiple bedrooms, a private pool, and a deck overlooking the ocean. Perfect for family vacations or group retreats, it provides a tranquil escape.",
+      "price": "$800/night",
+      "status": "Rent",
+      "bed":2,
+      "bathroom":2,
+      "area": "2500 sq ft",
+      "location": {
+        "zip_code": "33004",
+        "area": "Fort Lauderdale",
+        "country": "USA",
+        "state": "Florida",
+        "year_build":2019,
+        "garage":1
+      },
+      "facilities": [
+        "Air Conditioning",
+        "Barbeque",
+        "Outdoor Shower",
+        "Swimming Pool",
+        "WiFi",
+        "Window Coverings"
+      ],
+      "agent_name": "Lisa White",
+      "agent_img": "agent6.jpg",
+      "image": "vacation1.jpg"
+    },
+    {
+        "id": 7,
+        "estate_title": "Elegant Single-Family Home in the Suburbs",
+        "segment_name": "Comfortable apartment",
+        "main_image": "https://demo02.houzez.co/wp-content/uploads/2016/03/006-584x438.jpg",
+        "description": "This charming suburban home offers spacious living with 4 bedrooms, a large backyard, and a modern kitchen. Perfect for families, the property features an open floor plan, a two-car garage, and a peaceful neighborhood with excellent schools nearby.",
+        "price": "$750,000",
+        "status": "sale",
+        "bed":4,
+      "bathroom":3,
+        "area": "3000 sq ft",
+        "location": {
+          "zip_code": "75214",
+          "area": "Dallas",
+          "country": "USA",
+          "state": "Texas",
+          "year_build":2022,
+          "garage":1
+        },
+        "facilities": [
+          "Air Conditioning",
+          "Barbeque",
+          "Gym",
+          "Lawn",
+          "Refrigerator",
+          "Swimming Pool",
+          "WiFi",
+          "Window Coverings"
+        ],
+        "agent_name": "James Wilson",
+        "agent_img": "agent7.jpg",
+        "image": "single_family2.jpg"
+      },
+      {
+        "id": 8,
+        "estate_title": "Luxurious Townhouse with Skyline Views",
+        "segment_name": "Relaxing apartment",
+        "main_image": "https://demo02.houzez.co/wp-content/uploads/2016/03/007-584x438.jpg",
+        "description": "This upscale townhouse offers breathtaking views of the city skyline. It features 3 bedrooms, a gourmet kitchen, and a private rooftop terrace. Situated in a prime urban location, it’s close to high-end shopping, restaurants, and cultural attractions.",
+        "price": "$1,200,000",
+        "status": "Sale",
+        "bed":3,
+      "bathroom":2,
+        "area": "2800 sq ft",
+        "location": {
+          "zip_code": "10001",
+          "area": "Manhattan",
+          "country": "USA",
+          "state": "New York",
+          "year_build":2024,
+          "garage":1
+        },
+        "facilities": [
+          "Air Conditioning",
+          "Lawn",
+          "Microwave",
+          "Refrigerator",
+          "Sauna",
+          "Swimming Pool",
+          "TV Cable",
+          "WiFi"
+        ],
+        "agent_name": "Olivia Martin",
+        "agent_img": "agent8.jpg",
+        "image": "townhouse2.jpg"
+      },
+      {
+        "id": 9,
+        "estate_title": "Modern Apartment in the Heart of Tokyo",
+        "segment_name": "Renovated kitchen apartment",
+        "main_image": "https://demo02.houzez.co/wp-content/uploads/2016/02/033-584x438.jpg",
+        "description": "This sleek apartment is perfect for urban living, located in the bustling heart of Tokyo. It features a spacious living room, a stylish bedroom, and a fully equipped kitchen. Residents have access to amenities like a gym and a lounge area. The apartment is within walking distance of top dining spots and metro access.",
+        "price": "¥150,000/month",
+        "status": "Rent",
+        "bed":1,
+      "bathroom":1,
+        "area": "750 sq ft",
+        "location": {
+          "zip_code": "100-0005",
+          "area": "Tokyo",
+          "country": "Japan",
+          "state": "Chiyoda",
+          "year_build":2024,
+          "garage":1
+        },
+        "facilities": [
+          "Air Conditioning",
+          "Gym",
+          "Laundry",
+          "Microwave",
+          "Refrigerator",
+          "WiFi"
+        ],
+        "agent_name": "Takashi Nakamura",
+        "agent_img": "agent9.jpg",
+        "image": "apartment2.jpg"
+      },
+      {
+        "id": 10,
+        "estate_title": "Cozy Vacation Rental in the Mountains",
+        "segment_name": "Modern loft apartment",
+        "main_image": "https://demo02.houzez.co/wp-content/uploads/2016/03/031-584x438.jpg",
+        "description": "Nestled in the scenic mountains, this cozy vacation rental is a perfect retreat for nature lovers. The property offers 2 bedrooms, a fireplace, and a fully equipped kitchen. Guests can enjoy hiking trails, stunning views, and complete privacy for a relaxing getaway.",
+        "price": "$300/night",
+        "status": "Rent",
+        "bed":2,
+      "bathroom":1,
+        "area": "1500 sq ft",
+        "location": {
+          "zip_code": "81657",
+          "area": "Vail",
+          "country": "USA",
+          "state": "Colorado",
+          "year_build":2025,
+          "garage":1
+        },
+        "facilities": [
+          "Air Conditioning",
+          "Barbeque",
+          "Microwave",
+          "Outdoor Shower",
+          "Refrigerator",
+          "WiFi",
+          "Window Coverings"
+        ],
+        "agent_name": "Sarah Taylor",
+        "agent_img": "agent10.jpg",
+        "image": "vacation2.jpg"
+      }
+  ]
+  

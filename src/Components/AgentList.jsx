@@ -1,11 +1,11 @@
 import React from 'react';
 
-const About = () => {
+const AgentList = () => {
     return (
         <div>
-           <h1> this is about</h1>
+            
         </div>
     );
 };
 
-export default About;
+export default AgentList;
