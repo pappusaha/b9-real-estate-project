@@ -4,6 +4,7 @@ import { Link, useLoaderData, useParams } from 'react-router';
 import { LiaBedSolid ,LiaLandmarkSolid} from "react-icons/lia";
 import { MdOutlineShower ,MdGarage} from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { key } from 'localforage';
 
 
 const  ProductDetails= () => {
@@ -139,43 +140,43 @@ console.log(estateDetails)
 
 {/* start Address section  */}
 <div className='bg-white py-10 px-5 border-white mt-10 '>
-<div className='flex justify-between pb-12'>
-<h3 className='text-xl text-black font-bold'>Address</h3>
+<div className='flex justify-between pb-5 '>
+<h3 className='text-xl font-semibold text-slate-800  pb-10'>Address</h3>
 <Link to={'https://www.google.com/maps'}><button className=' bg-sky-400 text-white font-bold px-3 py-1 rounded-md'>Open Google on maps</button></Link>
 </div> 
-<div className=' flex justify-between space-x-2 '>
+<div className=' flex justify-between space-x-8 border-t-2 pt-8 '>
   <div className='  w-1/2 mx-auto '>
-  <div className='border-b-2 pb-4'> 
+  <div className='border-b-2 pb-4 flex justify-between items-center'> 
     <p className='text-black font-semibold'>Address</p>
   <p>{}</p>
   </div>
-  <div className='border-b-2 pb-4'>
+  <div className='border-b-2 pb-4 flex justify-between items-center'>
   <p className='text-black font-semibold'>City</p>
-  <p>{}</p>
+  <p>{location.state}</p>
 
   </div>
-  <div className='border-b-2 pb-4'>
+  <div className='border-b-2 pb-4 flex justify-between items-center'>
   <p className='text-black font-semibold'>State/county
   </p>
-  <p>{}</p>
+  <p>{location.country}</p>
 
   </div>
   </div>
   <div className='  w-1/2 mx-auto'>
-  <div className='border-b-2 pb-4'> 
+  <div className='border-b-2 pb-4 flex justify-between items-center'> 
     <p className='text-black font-semibold'>Zip/Postal Code
     </p>
-  <p>{}</p>
+  <p>{location.zip_code}</p>
   </div>
-  <div className='border-b-2 pb-4'>
+  <div className='border-b-2 pb-4 flex justify-between items-center'>
   <p className='text-black font-semibold'>Area</p>
-  <p>{}</p>
+  <p>{location.area}</p>
 
   </div>
-  <div className='border-b-2 pb-4'>
+  <div className='border-b-2 pb-4 flex justify-between items-center'>
   <p className='text-black font-semibold'>Country
   </p>
-  <p>{}</p>
+  <p>{location.country}</p>
 
   </div>
   
@@ -183,12 +184,40 @@ console.log(estateDetails)
 </div>
 
 </div>
+{/* end address section  */}
+
+{/* start fecilitis section */}
+
+<div className='bg-white py-10 px-5 border-white mt-10'>
+
+  <div className='pb-12'>
+    <h3 className='text-xl font-semibold text-slate-800 border-b-2 pb-10'>
+    Features
+    </h3>
+  
+  </div>
+<div className=' space-x-5 '>
+  
+    <ul className='grid grid-cols-2 md:grid-cols-3 gap-6 list-disc p-6'>
+     {
+      facilities.map((facility, index) => (
+        <li key={index} className="text-slate-800 font-semibold">{facility}</li>
+      ))
+     }
+    </ul>
+    
+  
+   
+  
+</div>
+</div>
             </div>
+            {/* profile section */}
             <div className='grid col-span-1'>
 <div>
 <div className='flex-row md:flex justify-between'>
 <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
-		<img src="https://source.unsplash.com/100x100/?portrait?1" alt="" className="object-cover object-center w-full h-full rounded dark:bg-gray-500" />
+		<img  src="https://demo02.houzez.co/wp-content/uploads/2016/02/agent-4-150x150.jpg" alt="Vincent Fuller" className="object-cover object-center lg:w-full h-full rounded " />
 	</div>
 	<div className="flex flex-col space-y-4">
 		<div>

@@ -3,6 +3,7 @@ import Banner from '../Components/Banner';
 import Products from '../Components/Products';
 import AgentList from '../Components/AgentList';
 import Faq from '../Components/Faq';
+import QueryForm from '../Components/QueryForm';
 
 const Home = () => {
     return (
@@ -11,7 +12,12 @@ const Home = () => {
         <div className='w-11/12 mx-auto'>
         <Products></Products>
         <AgentList></AgentList>
+        
+        </div>
+        <QueryForm></QueryForm>
+        <div className='w-11/12 mx-auto'>
         <Faq></Faq>
+
         </div>
         </div>
     );
