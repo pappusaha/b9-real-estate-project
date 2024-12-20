@@ -4,6 +4,7 @@ import Products from '../Components/Products';
 import AgentList from '../Components/AgentList';
 import Faq from '../Components/Faq';
 import QueryForm from '../Components/QueryForm';
+import Sponsor from '../Components/Sponsor';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
         <Faq></Faq>
 
         </div>
+        <Sponsor></Sponsor>
         </div>
     );
 };

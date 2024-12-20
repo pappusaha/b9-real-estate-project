@@ -66,8 +66,8 @@ const displayedProducts = showAll ? products : products.slice(0, 6);
 
             </div>
           
-            <div className="card-actions justify-start">
-           <NavLink to={`/productDetails/${id}`}> View Details </NavLink>
+            <div className="card-actions justify-center">
+           <NavLink className={'bg-slate-500 ease-in-out duration-300'} to={`/productDetails/${id}`}> View Property </NavLink>
                </div>
           </div>
         </div>
@@ -81,10 +81,10 @@ const displayedProducts = showAll ? products : products.slice(0, 6);
 
 
 </div>
-<div className='text-center'>
+<div className='text-center mt-20'>
 {products.length > 6 && (
     <button
-      className="btn btn-secondary"
+      className="px-8 py-2 rounded-md bg-cyan-700 text-white font-bold"
       onClick={() => setShowAll(!showAll)}
     >
       {showAll ? "See Less" : "See More"}

@@ -1,8 +1,9 @@
 import React from 'react';
+import 'animate.css';
 
 const QueryForm = () => {
     return (
-        <div className=''>
+        <div className='mt-40'>
         <div
   className=" min-h-screen bg-cover bg-top bg-no-repeat h-auto py-20 px-32 "
   style={{
@@ -12,7 +13,7 @@ const QueryForm = () => {
 
   <div className="hero-content flex-col lg:flex-row text-neutral-content text-center ">
   <div className="text-center lg:text-left ">
-      <h1 className="text-4xl font-bold w-4/5 mx-auto ">Design Custom Real Estate Inquiry Forms</h1>
+      <h1 className="text-4xl font-bold w-4/5 mx-auto animate__animated animate__bounce animate__delay-2s ">Design Custom Real Estate Inquiry Forms</h1>
       <p className="py-6 w-4/5 mx-auto">
       Design custom lead capture forms that integrate with the Houzez CRM
 

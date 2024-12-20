@@ -1,4 +1,4 @@
-'use client'
+import 'animate.css';
 
 import React, { useState } from 'react'
 import { Home, Menu, X, Phone, LogIn } from 'lucide-react'
@@ -31,7 +31,7 @@ const  Navbar=() =>{
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Home className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-800 hidden sm:inline">SingleHomes</span>
+              <span className="ml-2 text-xl font-bold text-gray-800 hidden sm:inline animate__animated animate__flash animate__delay-10s">SingleHomes</span>
               <span className="ml-2 text-xl font-bold text-gray-800 sm:hidden">SFH.com</span>
             </Link>
           </div>
