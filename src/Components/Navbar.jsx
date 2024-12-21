@@ -3,13 +3,14 @@ import 'animate.css';
 import React, { useState } from 'react'
 import { Home, Menu, X, Phone, LogIn } from 'lucide-react'
 import { Link, NavLink } from 'react-router'
+import UseAuth from '../Hooks/UseAuth';
 // import { Button } from "@/components/ui/button"
 
 const  Navbar=() =>{
-
+const {logout, user}=UseAuth()
   const navLinks=<> 
   <li> <NavLink to={'/'}>Home</NavLink></li>
-  <li> <NavLink to={'/listings'}>Listings</NavLink></li>
+  <li> <NavLink to={'/projects'}>Projects</NavLink></li>
   <li> <NavLink to={'/about'}>About</NavLink></li>
   <li> <NavLink to={'/contact'}>Contact</NavLink></li>
   </>
@@ -25,7 +26,7 @@ const  Navbar=() =>{
   }
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <nav className=" bg-white bg-opacity-70 shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -49,10 +50,34 @@ const  Navbar=() =>{
               <Phone className="h-5 w-5 text-blue-600 mr-2" />
               <span className="text-gray-600 text-sm">+910245355325</span>
             </div>
-            <button onClick={toggleLogin} variant="outline" size="sm" className="flex items-center">
-              <LogIn className="h-4 w-4 mr-2" />
-              {isLoggedIn ? 'Logout' : 'Login'}
-            </button>
+          
+     {
+      user?.email ?
+             <div className="dropdown dropdown-end">
+             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+               <div className="w-10 rounded-full">
+                 <img
+                   alt="User "
+                   src="https://i.postimg.cc/fRLBv1gH/Pappu-picture.jpg" />
+               </div>
+             </div>
+             <ul
+               tabIndex={0}
+               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+               <li>
+                 <a className="justify-between">
+                   Profile
+                   <span className="badge">New</span>
+                 </a>
+               </li>
+               <li><a>Settings</a></li>
+               <li  className=' '><button onClick={() => logout()}>Logout</button></li>
+             </ul>
+           </div> :
+           <Link to={'/login'}> <button className=' btn btn-sm text-lg text-slate-900 btn-ghost'> Log-In</button></Link>
+     }
+            
+           
           </div>
           
           <div className="flex items-center md:hidden">
@@ -85,9 +110,9 @@ const  Navbar=() =>{
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex items-center px-5">
-              <button onClick={toggleLogin} variant="outline" size="sm" className="w-full flex items-center justify-center">
-                <LogIn className="h-4 w-4 mr-2" />
-                {isLoggedIn ? 'Logout' : 'Login'}
+              <button  onClick={toggleLogin} variant="outline" size="sm" className="w-full flex items-center justify-center">
+                <LogIn className="h-4 w-4 mr-2" /> <Link to={'/login'}>Login </Link>
+               
               </button>
             </div>
           </div>

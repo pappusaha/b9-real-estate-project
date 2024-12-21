@@ -1,59 +1,61 @@
 import React from 'react';
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 const Footer = () => {
     return (
-        <footer className="p-6 bg-gray-800 text-gray-100">
-	<div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-4">
-		<div className="flex flex-col space-y-4">
-			<h2 className="font-medium">Getting started</h2>
-			<div className="flex flex-col space-y-2 text-sm text-gray-400">
-				<a rel="noopener noreferrer" href="#">Installation</a>
-				<a rel="noopener noreferrer" href="#">Release Notes</a>
-				<a rel="noopener noreferrer" href="#">Upgrade Guide</a>
-				<a rel="noopener noreferrer" href="#">Using with Preprocessors</a>
-				<a rel="noopener noreferrer" href="#">Optimizing for Production</a>
-				<a rel="noopener noreferrer" href="#">Browser Support</a>
-				<a rel="noopener noreferrer" href="#">IntelliSense</a>
+		<footer className="bg-gray-900 text-gray-400 py-6">
+		<div className="container mx-auto px-4">
+		  <div className="flex flex-wrap items-center justify-between">
+			{/* <!-- Links Section --> */}
+			<div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-4">
+			  <a href="#" className="hover:text-white">BLOG</a>
+			  <a href="#" className="hover:text-white">NEWSLETTER</a>
+			  <a href="#" className="hover:text-white">VIDEOS</a>
+			  <a href="#" className="hover:text-white">GALLERY</a>
+			  <a href="#" className="hover:text-white">HANDED OVER PROJECTS</a>
+			  <a href="#" className="hover:text-white">REVIEWS</a>
+			  <a href="#" className="hover:text-white">REAL ESTATE UPDATE</a>
+			  <a href="#" className="hover:text-white">CAREER</a>
+			  <a href="#" className="hover:text-white">FEEDBACK</a>
+			  <a href="#" className="hover:text-white">PRIVACY</a>
 			</div>
-		</div>
-		<div className="flex flex-col space-y-4">
-			<h2 className="font-medium">Core Concepts</h2>
-			<div className="flex flex-col space-y-2 text-sm text-gray-400">
-				<a rel="noopener noreferrer" href="#">Utility-First</a>
-				<a rel="noopener noreferrer" href="#">Responsive Design</a>
-				<a rel="noopener noreferrer" href="#">Hover, Focus, &amp; Other States</a>
-				<a rel="noopener noreferrer" href="#">Dark Mode</a>
-				<a rel="noopener noreferrer" href="#">Adding Base Styles</a>
-				<a rel="noopener noreferrer" href="#">Extracting Components</a>
-				<a rel="noopener noreferrer" href="#">Adding New Utilities</a>
+	  
+			{/* <!-- Social Icons --> */}
+			<div className="w-full lg:w-auto flex justify-center lg:justify-end gap-4 mt-4 lg:mt-0">
+			  <a href="#" className="text-gray-400 hover:text-white">
+				<i className="fab fa-facebook"></i>
+			  </a>
+			  <a href="#" className="text-gray-400 hover:text-white">
+				<i className="fab fa-linkedin"></i>
+			  </a>
+			  <a href="#" className="text-gray-400 hover:text-white">
+				<i className="fab fa-instagram"></i>
+			  </a>
+			  <a href="#" className="text-gray-400 hover:text-white">
+				<i className="fab fa-youtube"></i>
+			  </a>
 			</div>
+		  </div>
+	  
+		  <div className="text-center mt-6">
+			<p>bti Celebration Point, Plot: 3 & 5, Road: 113/A, Gulshan-2, Dhaka-1212</p>
+			<p>bti - Building Technology & Ideas Ltd. © 1984-2024</p>
+		  </div>
+	  
+		  {/* <!-- Contact Icons --> */}
+		  <div className="fixed bottom-4 right-4 flex flex-col gap-2">
+			<a href="tel:16604" className="bg-black text-white rounded-full p-3 hover:bg-gray-700">
+			  <i className="fas fa-phone"></i>
+			</a>
+			<a href="#" className="bg-green-500 text-white rounded-full p-3 hover:bg-green-600">
+			  <i className="fab fa-whatsapp"></i>
+			</a>
+		  </div>
 		</div>
-		<div className="flex flex-col space-y-4">
-			<h2 className="font-medium">Customization</h2>
-			<div className="flex flex-col space-y-2 text-sm text-gray-400">
-				<a rel="noopener noreferrer" href="#">Configuration</a>
-				<a rel="noopener noreferrer" href="#">Theme Configuration</a>
-				<a rel="noopener noreferrer" href="#">Breakpoints</a>
-				<a rel="noopener noreferrer" href="#">Customizing Colors</a>
-				<a rel="noopener noreferrer" href="#">Customizing Spacing</a>
-				<a rel="noopener noreferrer" href="#">Configuring Variants</a>
-				<a rel="noopener noreferrer" href="#">Plugins</a>
-			</div>
-		</div>
-		<div className="flex flex-col space-y-4">
-			<h2 className="font-medium">Community</h2>
-			<div className="flex flex-col space-y-2 text-sm text-gray-400">
-				<a rel="noopener noreferrer" href="#">GitHub</a>
-				<a rel="noopener noreferrer" href="#">Discord</a>
-				<a rel="noopener noreferrer" href="#">Twitter</a>
-				<a rel="noopener noreferrer" href="#">YouTube</a>
-			</div>
-		</div>
-	</div>
-	<div className="flex items-center justify-center px-6 pt-12 text-sm">
-		<span className="text-gray-400">© Copyright 1986. All Rights Reserved.</span>
-	</div>
-</footer>
+	  </footer>
+	  
+	
+	  
     );
 };
 

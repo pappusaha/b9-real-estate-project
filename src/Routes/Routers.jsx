@@ -5,6 +5,9 @@ import Home from "../pages/Home";
 import Register from "../Components/Register";
 import Login from "../Components/Login";
 import ProductDetails from "../Components/ProductDetails";
+import Contacts from "../pages/Contacts";
+import About from "../pages/About";
+import Projects from "../pages/Projects";
 
 
 
@@ -19,17 +22,30 @@ import ProductDetails from "../Components/ProductDetails";
           element:<Home></Home>
         },
         {
-          path:'register',
+          path:'/register',
           element:<Register></Register>
         },
         {
-          path:'login', 
+          path:'/login', 
           element:<Login></Login>
         },
        {
         path:'/productDetails/:id',
        element:<ProductDetails></ProductDetails>,
        loader:() => fetch('/Products.Json')
+       },
+       {
+        path:'/contact',
+        element:<Contacts></Contacts>
+       },
+       {
+        path:'/about',
+
+        element:<About></About>
+       },
+       {
+        path:'projects',
+        element:<Projects></Projects>
        }
       ]
     },
