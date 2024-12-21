@@ -11,5 +11,5 @@ createRoot(document.getElementById('root')).render(
   <FirebaseProvider>
   <RouterProvider router={Router} />
   </FirebaseProvider>
-  </StrictMode>,
+  </StrictMode>
 )

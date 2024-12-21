@@ -1,11 +1,15 @@
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { IoEyeOutline } from "react-icons/io5";
 import { useForm } from "react-hook-form"
 import UseAuth from '../Hooks/UseAuth';
 
 const Register = () => {
-    const {createUser}=UseAuth()
-    console.log("Submitted Data:",createUser)
+
+	const location =useLocation()
+const navigate=useNavigate()
+const form=location?.state || '/'
+
+    const {createUser,updateUser}=UseAuth()
 
     const {
         register,
@@ -16,9 +20,13 @@ const Register = () => {
 		console.log("Submitted Data:", data);
 		const{email, password}=data
 		createUser(email,password)
-		.then((userCredential) => {
-			console.log("User Created Successfully:", userCredential);
-		})
+		.then(() => {
+			updateUser(name, image).then=() => {
+	navigate(form)
+			}
+			
+		  })
+	
 		.catch((error) => {
 			console.error("Error Creating User:", error.message);
 		});
@@ -40,6 +48,12 @@ const Register = () => {
 			<div className=''>
 				<input {...register("firstName", { required: true})} type="text" name="firstName" id="name" placeholder="FullName" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100"  />
 				{errors.firstName?.type === 'required' && <p className='text-rose-600' role="alert">First name is required</p>}
+               
+			</div>
+			<label htmlFor="image" className="text-sm">Image</label>
+			<div className=''>
+				<input {...register("image")} type="text" name="image" id="image" placeholder="Image" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100"  />
+				
                
 			</div>
 

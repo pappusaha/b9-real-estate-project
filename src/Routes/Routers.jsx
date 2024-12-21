@@ -8,6 +8,7 @@ import ProductDetails from "../Components/ProductDetails";
 import Contacts from "../pages/Contacts";
 import About from "../pages/About";
 import Projects from "../pages/Projects";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 
@@ -31,7 +32,9 @@ import Projects from "../pages/Projects";
         },
        {
         path:'/productDetails/:id',
-       element:<ProductDetails></ProductDetails>,
+       element:<PrivateRoute>
+        <ProductDetails></ProductDetails>
+        </PrivateRoute>,
        loader:() => fetch('/Products.Json')
        },
        {
@@ -44,8 +47,8 @@ import Projects from "../pages/Projects";
         element:<About></About>
        },
        {
-        path:'projects',
-        element:<Projects></Projects>
+        path:'/projects',
+        element:<PrivateRoute><Projects></Projects></PrivateRoute>
        }
       ]
     },

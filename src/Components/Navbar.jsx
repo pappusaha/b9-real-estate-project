@@ -4,16 +4,21 @@ import React, { useState } from 'react'
 import { Home, Menu, X, Phone, LogIn } from 'lucide-react'
 import { Link, NavLink } from 'react-router'
 import UseAuth from '../Hooks/UseAuth';
-// import { Button } from "@/components/ui/button"
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
+
 
 const  Navbar=() =>{
 const {logout, user}=UseAuth()
+
+
   const navLinks=<> 
   <li> <NavLink to={'/'}>Home</NavLink></li>
-  <li> <NavLink to={'/projects'}>Projects</NavLink></li>
+  <PrivateRoute><li> <NavLink to={'/projects'}>Projects</NavLink></li></PrivateRoute>
   <li> <NavLink to={'/about'}>About</NavLink></li>
   <li> <NavLink to={'/contact'}>Contact</NavLink></li>
   </>
+
+ 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -52,13 +57,15 @@ const {logout, user}=UseAuth()
             </div>
           
      {
-      user?.email ?
+      user?.email || user?.displayName ?
              <div className="dropdown dropdown-end">
              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                <div className="w-10 rounded-full">
                  <img
+                   
+                   src={user?.photoURL || "https://i.postimg.cc/fRLBv1gH/Pappu-picture.jpg"}
                    alt="User "
-                   src="https://i.postimg.cc/fRLBv1gH/Pappu-picture.jpg" />
+                   />
                </div>
              </div>
              <ul
@@ -66,7 +73,7 @@ const {logout, user}=UseAuth()
                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                <li>
                  <a className="justify-between">
-                   Profile
+                   {user?.displayName || 'Unknown'}
                    <span className="badge">New</span>
                  </a>
                </li>
