@@ -13,7 +13,8 @@ const {logout, user}=UseAuth()
 
   const navLinks=<> 
   <li> <NavLink to={'/'}>Home</NavLink></li>
-  <PrivateRoute><li> <NavLink to={'/projects'}>Projects</NavLink></li></PrivateRoute>
+  <PrivateRoute>
+    <li> <NavLink to={'/projects'}>Projects</NavLink></li></PrivateRoute>
   <li> <NavLink to={'/about'}>About</NavLink></li>
   <li> <NavLink to={'/contact'}>Contact</NavLink></li>
   </>

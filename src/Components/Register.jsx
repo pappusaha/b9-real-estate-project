@@ -2,6 +2,8 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { IoEyeOutline } from "react-icons/io5";
 import { useForm } from "react-hook-form"
 import UseAuth from '../Hooks/UseAuth';
+import { useState } from 'react';
+import { FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
 
@@ -16,9 +18,24 @@ const form=location?.state || '/'
         handleSubmit,
         formState: { errors },
       } = useForm();
+	  const [showPassword, setShowPassword]=useState(false)
+	  const togglePassword =()=> {
+        setShowPassword(!showPassword)
+    }
+	  const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
+
       const onSubmit = (data) => {
-		console.log("Submitted Data:", data);
-		const{email, password}=data
+	
+		const{email, password,name,image}=data
+if(!passwordRegex.test(password)){
+	setError("password", {
+		type: "manual",
+		message: "Password must contain at least one uppercase letter, one number, and one special character."
+	});
+	return;
+}
+
 		createUser(email,password)
 		.then(() => {
 			updateUser(name, image).then=() => {
@@ -32,6 +49,8 @@ const form=location?.state || '/'
 		});
 
 	  }
+
+
 
 
     return (
@@ -69,9 +88,15 @@ const form=location?.state || '/'
 					
 				</div>
 			<div className='relative'>
-            <input {...register("password", { required: true, maxLength: 20 })} type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 " />
+            <input  type={showPassword ? 'text': 'password'} {...register("password", { required: true, maxLength: 20 })}  name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 " />
+			
 			{errors.password?.type === 'required' && <p className='text-rose-600' role="alert">Password name is required</p>}
-            <IoEyeOutline className='w-10 h-6 absolute top-2 right-1 ' />
+			{errors.password?.message && <p className='text-rose-600' role="alert">{errors.password.message}</p>}
+			
+<button  onClick={togglePassword} className='absolute top-1 right-1 translate-y-7'>
+{ showPassword ? <IoEyeOutline className='w-10 h-6 cursor-pointer' /> : <FaRegEyeSlash className='w-10 h-6  cursor-pointer' />} 
+</button>
+         
             <a rel="noopener noreferrer" href="#" className="text-xs hover:underline text-gray-400 text-end">Forgot password?</a>
             </div>
 			</div>
