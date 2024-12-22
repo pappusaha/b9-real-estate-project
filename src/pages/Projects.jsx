@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projects = () => {
     return (
-        <div className=' mb-32 scroll-mx-3'>
+        <div className='bg-gray-100   scroll-mx-3'>
 
             
          <div

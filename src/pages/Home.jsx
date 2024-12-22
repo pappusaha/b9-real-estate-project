@@ -8,7 +8,7 @@ import Sponsor from '../Components/Sponsor';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-gray-100 '>
         <Banner></Banner>
         <div className='w-11/12 mx-auto'>
         <Products></Products>

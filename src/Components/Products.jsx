@@ -17,7 +17,7 @@ useEffect(() => {
 const displayedProducts = showAll ? products : products.slice(0, 6);
 
 return (
-  <section className="bg-gray-50 py-10">
+  <section className=" py-10">
     {/* Header Section */}
     <div className="text-center mb-8">
       <h1 className="text-4xl font-extrabold text-gray-800 mb-4">

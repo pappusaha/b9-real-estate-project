@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contacts = () => {
     return (
-        <section className="py-6 bg-gray-800 text-gray-50 my-32">
+        <section className=" bg-gray-800 text-gray-50 my-20">
 			<section className="my-8 bg-gray-800 text-gray-100">
 	<div className="container flex flex-col items-center p-4 mx-auto space-y-6 md:p-8">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-16 h-16 text-violet-400">

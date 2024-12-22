@@ -3,7 +3,7 @@ import React from 'react';
 const AgentList = () => {
     return (
         <> 
-            <section className='mt-36 text-center px-4 bg-white p-32'>
+            <section className='mt-36 text-center px-4 bg-gray-100 py-10'>
                 {/* Section Header */}
                 <div>
                     <h3 className='text-4xl font-bold text-gray-800'>Meet Our Real Estate Agents</h3>
