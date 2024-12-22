@@ -1,6 +1,6 @@
 // import React, { useState } from 'react';
 import UseAuth from '../Hooks/UseAuth';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router';
 
 const PrivateRoute = ({children}) => {
 
@@ -11,7 +11,7 @@ const PrivateRoute = ({children}) => {
 
 
     if (!user){
-        return <Navigate to={'/login'} state={location?.pathname || '/'}></Navigate>
+        return <Navigate to={'/login'} state={location?.pathname && '/'}></Navigate>
     }
      return (
         <div>

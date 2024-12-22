@@ -2,11 +2,13 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import React, { createContext, useEffect, useState } from 'react';
 import auth from '../Firebase/Firebase.config';
 export const AuthContext=createContext(null)
-import {TwitterAuthProvider , GoogleAuthProvider ,signInWithPopup ,GithubAuthProvider ,signOut } from "firebase/auth";
+import {TwitterAuthProvider ,FacebookAuthProvider, GoogleAuthProvider ,signInWithPopup  ,signOut } from "firebase/auth";
 const googleProvider = new GoogleAuthProvider();
-const gitHubProvider = new GithubAuthProvider();
+
 const twitterProvider = new TwitterAuthProvider();
+const FacebookProvider = new FacebookAuthProvider();
 const FirebaseProvider = ({children}) => {
+  
 
     // keep the user hold 
     const [user, setUser]=useState(null)
@@ -36,9 +38,9 @@ const updateUser=(name, image)=>{
 // here social logInUser 
 
 // gitHub User 
-const gitHubLogin=() => {
+const FacebookLogin=() => {
     // setLoading(true)
-    return signInWithPopup(auth, gitHubProvider)
+    return signInWithPopup(auth, FacebookProvider)
 
 }
 // TwitterUser
@@ -84,7 +86,7 @@ const allValues={
     user,
     logInUser,
     googleLogin,
-    gitHubLogin,
+ 
     logout,
     twitterLogin,
     // loading,

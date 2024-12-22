@@ -79,7 +79,7 @@ const {logout, user}=UseAuth()
                  </a>
                </li>
                <li><a>Settings</a></li>
-               <li  className=' '><button onClick={() => logout()}>Logout</button></li>
+               <li  className=''><button onClick={() => logout()}>Logout</button></li>
              </ul>
            </div> :
            <Link to={'/login'}> <button className=' btn btn-sm text-lg text-slate-900 btn-ghost'> Log-In</button></Link>
@@ -119,7 +119,7 @@ const {logout, user}=UseAuth()
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex items-center px-5">
               <button  onClick={toggleLogin} variant="outline" size="sm" className="w-full flex items-center justify-center">
-                <LogIn className="h-4 w-4 mr-2" /> <Link to={'/login'}>Login </Link>
+                <LogIn className="h-4 w-4 mr-2 text-xl font-bold" /> <Link to={'/login'}>Login</Link>
                
               </button>
             </div>

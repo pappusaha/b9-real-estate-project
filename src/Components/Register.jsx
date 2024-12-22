@@ -19,6 +19,7 @@ const form=location?.state || '/'
         formState: { errors },
       } = useForm();
 	  const [showPassword, setShowPassword]=useState(false)
+	  const [error, setError]=useState(null)
 	  const togglePassword =()=> {
         setShowPassword(!showPassword)
     }
@@ -93,7 +94,7 @@ if(!passwordRegex.test(password)){
 			{errors.password?.type === 'required' && <p className='text-rose-600' role="alert">Password name is required</p>}
 			{errors.password?.message && <p className='text-rose-600' role="alert">{errors.password.message}</p>}
 			
-<button  onClick={togglePassword} className='absolute top-1 right-1 translate-y-7'>
+<button  onClick={togglePassword} className='absolute -top-5 right-1 translate-y-7'>
 { showPassword ? <IoEyeOutline className='w-10 h-6 cursor-pointer' /> : <FaRegEyeSlash className='w-10 h-6  cursor-pointer' />} 
 </button>
          
