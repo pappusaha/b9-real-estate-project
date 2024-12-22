@@ -14,10 +14,6 @@ const  ProductDetails= () => {
  const idx=parseInt(id)
 const estateDetails=pdtDetails.find(singleEstateDetails => singleEstateDetails.id === idx)
 
-console.log(pdtDetails)
-console.log(idx)
-
-console.log(estateDetails)
     
     const { year_build,garage,status,estate_title,segment_name,main_image,description,price,bed,bathroom,area,location,facilities,agent_name,agent_img}=estateDetails
     return (

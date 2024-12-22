@@ -1,132 +1,144 @@
 import 'animate.css';
-
-import React, { useState } from 'react'
-import { Home, Menu, X, Phone, LogIn } from 'lucide-react'
-import { Link, NavLink } from 'react-router'
+import React, { useState } from 'react';
+import { Home, Menu, X, Phone, LogIn } from 'lucide-react';
+import { Link, NavLink } from 'react-router-dom';
 import UseAuth from '../Hooks/UseAuth';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
+const Navbar = () => {
+  const { logout, user } = UseAuth();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-const  Navbar=() =>{
-const {logout, user}=UseAuth()
-
-
-  const navLinks=<> 
-  <li> <NavLink to={'/'}>Home</NavLink></li>
-  <PrivateRoute>
-    <li> <NavLink to={'/projects'}>Projects</NavLink></li></PrivateRoute>
-  <li> <NavLink to={'/about'}>About</NavLink></li>
-  <li> <NavLink to={'/contact'}>Contact</NavLink></li>
-  </>
-
- 
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const toggleLogin = () => {
-    setIsLoggedIn(!isLoggedIn)
-  }
+  const navLinks = (
+    <>
+      <li>
+        <NavLink to="/" className="hover:text-blue-600  hover:font-extrabold">
+          Home
+        </NavLink>
+      </li>
+      <PrivateRoute>
+        <li>
+          <NavLink to="/projects" className="hover:text-blue-600  hover:font-extrabold">
+            Projects
+          </NavLink>
+        </li>
+      </PrivateRoute>
+      <li>
+        <NavLink to="/about" className="hover:text-blue-600  hover:font-extrabold">
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact" className="hover:text-blue-600  hover:font-extrabold">
+          Contact
+        </NavLink>
+      </li>
+    </>
+  );
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
-    <nav className=" bg-white bg-opacity-70 shadow-md fixed top-0 left-0 right-0 z-50">
+    <nav className="bg-white bg-opacity-80 shadow-lg fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          {/* Logo Section */}
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center">
+            <Link to="/" className="flex items-center">
               <Home className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-800 hidden sm:inline animate__animated animate__flash animate__delay-10s">SingleHomes</span>
-              <span className="ml-2 text-xl font-bold text-gray-800 sm:hidden">SFH.com</span>
+              <span className="ml-2 text-xl font-bold text-gray-800 hidden sm:inline animate__animated animate__flash">
+                SingleHomes
+              </span>
             </Link>
           </div>
-          
-          <div className="hidden md:flex md:items-center md:justify-center flex-grow">
-          <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 space-x-3">
-          {navLinks}
-          </ul>
-        </div>
-          </div>
-          
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center">
-            <div className="flex items-center mr-4">
-              <Phone className="h-5 w-5 text-blue-600 mr-2" />
-              <span className="text-gray-600 text-sm">+910245355325</span>
-            </div>
-          
-     {
-      user?.email || user?.displayName ?
-             <div className="dropdown dropdown-end">
-             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-               <div className="w-10 rounded-full">
-                 <img
-                   
-                   src={user?.photoURL || "https://i.postimg.cc/fRLBv1gH/Pappu-picture.jpg"}
-                   alt="User "
-                   />
-               </div>
-             </div>
-             <ul
-               tabIndex={0}
-               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-               <li>
-                 <a className="justify-between">
-                   {user?.displayName || 'Unknown'}
-                   <span className="badge">New</span>
-                 </a>
-               </li>
-               <li><a>Settings</a></li>
-               <li  className=''><button onClick={() => logout()}>Logout</button></li>
-             </ul>
-           </div> :
-           <Link to={'/login'}> <button className=' btn btn-sm text-lg text-slate-900 btn-ghost'> Log-In</button></Link>
-     }
-            
-           
+            <ul className="menu menu-horizontal px-4 space-x-6 font-semibold text-gray-700">
+              {navLinks}
+            </ul>
           </div>
-          
-          <div className="flex items-center md:hidden">
-            <div className="flex items-center mr-2">
-              <Phone className="h-5 w-5 text-blue-600 mr-1" />
-              <span className="text-gray-600 text-xs">+910245355325</span>
+
+          {/* Contact and User Section */}
+          <div className="hidden md:flex items-center space-x-6">
+            <div className="flex items-center text-gray-600 space-x-2">
+              <Phone className="h-5 w-5 text-blue-600" />
+              <span className="text-sm">+910245355325</span>
             </div>
+            {user?.email || user?.displayName ? (
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  className="btn btn-ghost btn-circle avatar flex items-center"
+                >
+                  <img
+                    className="w-10 rounded-full"
+                    src={user?.photoURL || 'https://i.postimg.cc/fRLBv1gH/Pappu-picture.jpg'}
+                    alt="User"
+                  />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <a>{user?.displayName || 'User'}</a>
+                  </li>
+                  <li>
+                    <button onClick={logout} className="text-red-500">
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <Link to="/login">
+                <button className="btn btn-sm bg-blue-600 text-white hover:bg-blue-500">
+                  Log-In
+                </button>
+              </Link>
+            )}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
             <button
               onClick={toggleMobileMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-              aria-expanded={isMobileMenuOpen}
+              className="p-2 rounded-md text-gray-600 hover:bg-gray-200 focus:outline-none"
             >
-              <span className="sr-only">Open main menu</span>
-              {isMobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-         <ul>
-         {navLinks}
-         </ul>
-          </div>
-          <div className="pt-4 pb-3 border-t border-gray-200">
-            <div className="flex items-center px-5">
-              <button  onClick={toggleLogin} variant="outline" size="sm" className="w-full flex items-center justify-center">
-                <LogIn className="h-4 w-4 mr-2 text-xl font-bold" /> <Link to={'/login'}>Login</Link>
-               
+        <div className="md:hidden bg-white">
+          <ul className="space-y-4 p-4 font-medium text-gray-700">{navLinks}</ul>
+          <div className="p-4 border-t border-gray-200 flex justify-between items-center">
+            <span className="flex items-center text-gray-600 text-sm space-x-2">
+              <Phone className="h-5 w-5 text-blue-600" />
+              <span>+910245355325</span>
+            </span>
+            {!user?.email ? (
+              <Link to="/login">
+                <button className="btn btn-sm bg-blue-600 text-white hover:bg-blue-500">
+                  Log-In
+                </button>
+              </Link>
+            ) : (
+              <button onClick={logout} className="text-red-500">
+                Logout
               </button>
-            </div>
+            )}
           </div>
         </div>
       )}
     </nav>
-  )
-}
-export default Navbar
+  );
+};
+
+export default Navbar;
