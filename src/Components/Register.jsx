@@ -16,10 +16,12 @@ const form=location?.state || '/'
     const {
         register,
         handleSubmit,
+		setError,
+
         formState: { errors },
       } = useForm();
 	  const [showPassword, setShowPassword]=useState(false)
-	  const [error, setError]=useState(null)
+	  
 	  const togglePassword =()=> {
         setShowPassword(!showPassword)
     }
@@ -39,9 +41,9 @@ if(!passwordRegex.test(password)){
 
 		createUser(email,password)
 		.then(() => {
-			updateUser(name, image).then=() => {
-	navigate(form)
-			}
+			updateUser(name, image).then(() => {
+				navigate(form);
+			});
 			
 		  })
 	
