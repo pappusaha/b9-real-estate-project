@@ -43,7 +43,7 @@ navigate(form)
           } = useForm();
 
           const onSubmit = (data) => {
-         
+         console.log(data)
             const{email, password}=data
             logInUser(email,password)
             .then((result) => {

@@ -27,7 +27,7 @@ const form=location?.state || '/'
 
 
       const onSubmit = (data) => {
-	console.log
+	console.log(data)
 		const{email, password,name,image}=data
 if(!passwordRegex.test(password)){
 	setError("password", {
