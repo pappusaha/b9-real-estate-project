@@ -1,12 +1,15 @@
-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { IoEyeOutline } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import UseAuth from '../Hooks/UseAuth';
 import { useState } from 'react';
 import { FaRegEyeSlash } from "react-icons/fa";
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
+    <Helmet>
+        <title>Real-estete |log-in</title>
+    </Helmet>
     const {user,logInUser,googleLogin,FacebookProvider,twitterLogin
     }=UseAuth()
     const [showPassword, setShowPassword]=useState(false)

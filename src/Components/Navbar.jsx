@@ -48,9 +48,10 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <Home className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-800 hidden sm:inline animate__animated animate__flash">
-                SingleHomes
-              </span>
+              <span className="ml-2 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hidden sm:inline animate__animated animate__flash transform hover:scale-110 transition-all duration-500">
+    UrbanNest
+</span>
+
             </Link>
           </div>
 

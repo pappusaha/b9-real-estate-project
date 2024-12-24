@@ -4,7 +4,8 @@ import { Link, useLoaderData, useParams } from 'react-router';
 import { LiaBedSolid ,LiaLandmarkSolid} from "react-icons/lia";
 import { MdOutlineShower ,MdGarage} from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
-import { key } from 'localforage';
+import { Helmet } from 'react-helmet-async';
+// import { key } from 'localforage';
 
 
 const  ProductDetails= () => {
@@ -18,13 +19,17 @@ const estateDetails=pdtDetails.find(singleEstateDetails => singleEstateDetails.i
     const { year_build,garage,status,estate_title,segment_name,main_image,description,price,bed,bathroom,area,location,facilities,agent_name,agent_img}=estateDetails
     return (
       <>
+      {/* this is dynamic title */}
+      <Helmet>
+        <title>Product Details page {id}</title>
+      </Helmet>
       <Navbar></Navbar>
-      <section className=' mt-20 md:mt-40'> 
+      <section className=' bg-gray-50 pt-20 md:pt-40'> 
         <div className='flex-row lg:flex justify-between w-11/12 mx-auto'>
           <div className=' space-y-3'>
             <h2 className='text-3xl font-bold text-black'>{estate_title} </h2>
             <h3 className='text-xl font-bold text-black'>{segment_name}</h3>
-            <div className='flex space-x-2 items-center'>
+            <div className=' space-x-2 items-center lg:flex justify-between'>
             <p className='text-xl font-semibold bg-lime-600 text-white py-1 px-4'>FEATURE</p>
             <p className='text-xl font-bold bg-stone-900 text-white py-1 px-4'>{status}</p>
                </div>

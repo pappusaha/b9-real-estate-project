@@ -27,7 +27,7 @@ const form=location?.state || '/'
 
 
       const onSubmit = (data) => {
-	
+	console.log
 		const{email, password,name,image}=data
 if(!passwordRegex.test(password)){
 	setError("password", {
@@ -66,8 +66,8 @@ if(!passwordRegex.test(password)){
 		<div className="space-y-4">
         <label htmlFor="Name" className="text-sm">Name</label>
 			<div className=''>
-				<input {...register("firstName", { required: true})} type="text" name="firstName" id="name" placeholder="FullName" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100"  />
-				{errors.firstName?.type === 'required' && <p className='text-rose-600' role="alert">First name is required</p>}
+				<input {...register("name", { required: true})} type="text" name="name" id="name" placeholder="FullName" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100"  />
+				{errors.name?.type === 'required' && <p className='text-rose-600' role="alert">First name is required</p>}
                
 			</div>
 			<label htmlFor="image" className="text-sm">Image</label>

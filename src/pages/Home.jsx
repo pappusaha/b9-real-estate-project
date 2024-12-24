@@ -5,10 +5,15 @@ import AgentList from '../Components/AgentList';
 import Faq from '../Components/Faq';
 import QueryForm from '../Components/QueryForm';
 import Sponsor from '../Components/Sponsor';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div className='bg-gray-100 '>
+              {/* this is dynamic title */}
+       <Helmet>
+                <title> Real-estate |Home</title>
+            </Helmet>
         <Banner></Banner>
         <div className='w-11/12 mx-auto'>
         <Products></Products>

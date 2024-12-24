@@ -34,7 +34,7 @@ const AgentList = () => {
                     </div>
 
                     {/* Agent Card 2 */}
-                    <div className='bg-white shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 p-6 rounded-lg'>
+                    <div className='bg-white shadow-lg hover:shadow-2xl hover:scale-105  duration-300 p-6 rounded-lg'>
                         <div className='flex justify-center mb-4'>
                             <img
                                 className='rounded-full w-24 h-24'
