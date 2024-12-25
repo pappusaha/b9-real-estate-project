@@ -90,7 +90,8 @@ const allValues={
     logout,
     twitterLogin,
     // loading,
-    updateUser
+    updateUser,
+    FacebookLogin
 }
 
 
