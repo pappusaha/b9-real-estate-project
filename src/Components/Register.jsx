@@ -4,9 +4,10 @@ import { useForm } from "react-hook-form"
 import UseAuth from '../Hooks/UseAuth';
 import { useState } from 'react';
 import { FaRegEyeSlash } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
-
+	const notify = () => toast('Wow so easy !');
 	const location =useLocation()
 const navigate=useNavigate()
 const form=location?.state || '/'
@@ -29,7 +30,7 @@ const form=location?.state || '/'
 
 
       const onSubmit = (data) => {
-	console.log(data)
+	
 		const{email, password,name,image}=data
 if(!passwordRegex.test(password)){
 	setError("password", {
@@ -42,6 +43,7 @@ if(!passwordRegex.test(password)){
 		createUser(email,password)
 		.then(() => {
 			updateUser(name, image).then(() => {
+{notify}
 				navigate(form);
 			});
 			
@@ -58,6 +60,7 @@ if(!passwordRegex.test(password)){
 
     return (
         <div className=' my-32 flex justify-center'>
+			 <ToastContainer />
         <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-900 text-gray-100">
 	<div className="mb-8 text-center">
 		<h1 className="my-3 text-4xl font-bold">Sign Up</h1>
